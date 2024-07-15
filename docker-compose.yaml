@@ -1,6 +1,12 @@
 version: '3.5'
 
 services:
+
+app:
+    environment:
+      - REDIS_HOST=redis
+      - REDIS_PORT=6379
+
   mock-user-service:
     image: mockserver/mockserver:mockserver-5.11.1
     ports:
